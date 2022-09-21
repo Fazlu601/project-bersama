@@ -1,8 +1,130 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Main style */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif ;
+}
+
+body {
+    background-color: #F6F5F5;
+}
+
+.d-none {
+    display: none;
+}
+
+span.fa-bars {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    background-color: #002B5B;
+    padding: 15px 30px;
+}
+
+.wrapper {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+ul.nav-list, li.nav-item {
+    display: flex;
+    list-style: none;
+}
+
+li.nav-item {
+    padding: 0 10px;
+    margin: 0 10px;
+    opacity: 0.5;
+}
+
+a.nav-links {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+}
+
+li.nav-item:hover {
+    transform: translateY(10%);
+    border-bottom: 2px solid white;
+    transition: 0.3s;
+    opacity: 1;
+}
+
+
+/* Media Query Responsif */
+@media screen and (max-width: 890px) {
+    .logo {
+        font-size: 25px;
+    }
+    a.nav-links {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 740px) {
+    .logo {
+        font-size: 23px;
+    }
+    a.nav-links {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    span.fa-bars, span.fa-close {
+        display: flex;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    ul.nav-list {
+        display: none;
+    }
+
+    ul.menu-hide {
+        margin: 20px 0 10px;
+    }
+    ul.menu-hide > li.nav-item {
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+    }
+    
+    li.nav-item:hover {
+        border: 0;
+    }
+    
+    ul.menu-hide > li.nav-item > a.nav-links {
+        text-align: center;
+    }
+    
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
